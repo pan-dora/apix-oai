@@ -1,0 +1,6 @@
+rootProject.name = 'apix-oai'
+include ':pandora-karaf'
+include ':exts-oai'
+
+project(':pandora-karaf').projectDir = "$rootDir/pandora-karaf" as File
+project(':exts-oai').projectDir = "$rootDir/exts-oai" as File

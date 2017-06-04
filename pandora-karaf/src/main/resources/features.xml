@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<features xmlns="http://karaf.apache.org/xmlns/features/v1.3.0" name="pandora-exts-0.0.1">
+  <feature name="exts-oai" version="0.0.1">
+    <details>Installs the OAI-PMH service</details>
+
+    <feature version="[2.18,3)">camel</feature>
+    <feature version="[2.18,3)">camel-blueprint</feature>
+    <feature version="[2.18,3)">camel-jetty9</feature>
+    <feature version="[2.18,3)">camel-saxon</feature>
+    <feature version="[4.5,5)">fcrepo-camel</feature>
+    <feature version="[2.18,3)">camel-http4</feature>
+
+    <bundle>mvn:cool.pandora/exts-oai/0.0.1</bundle>
+
+    <configfile finalname="/etc/cool.pandora.exts.oai.cfg">mvn:cool.pandora/exts-oai/0.0.1/cfg/configuration</configfile>
+  </feature>
+</features>
