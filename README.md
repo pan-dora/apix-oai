@@ -20,8 +20,14 @@ Build Docker image
 Execute Docker Compose
      
      docker-compose up
+     
+Creating OAI Test Data
+----------------- 
+See [rdfxml-ingest](https://github.com/pan-dora/rdfxml-ingest)    
 
 Check OAI Endpoint
 -----------------
 
-    curl http:localhost:9104/oai
+```sh    
+    $ curl -sS 'http://localhost:9104/oai?verb=ListRecords&set=gmd'
+```

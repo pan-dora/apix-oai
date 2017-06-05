@@ -9,7 +9,7 @@ services:
       - "8181:8181"
 
   apix:
-    image: pandorasystems/apix:0.2.3
+    image: pandorasystems/apix:0.2.2
     container_name: apix
     env_file: apix.env
     ports:
