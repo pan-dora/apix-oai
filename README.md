@@ -5,22 +5,28 @@ An API-X extension for OAI-PMH provider dissemination.
 
 Building
 --------
+Create gradle.properties
+```sh 
+    $ echo "version=0.0.1" > gradle.properties
+```
+
 Create OSGI bundles
-
-    gradle install
-
+```sh 
+    $ gradle install
+```
 Copy bundles from local Maven repository to Docker Build directory
-     
-     gradle copyTask
-
+```sh      
+    $ gradle copyTask
+```
 Build Docker image
-
-     gradle docker
-
+```sh 
+    $ gradle docker
+```
 Execute Docker Compose
-     
-     docker-compose up
-     
+ ```sh     
+    $ docker-compose up
+  ```   
+
 Creating OAI Test Data
 ----------------- 
 See [rdfxml-ingest](https://github.com/pan-dora/rdfxml-ingest)    

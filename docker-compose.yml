@@ -7,6 +7,11 @@ services:
     ports:
       - "61616:61616"
       - "8181:8181"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://activemq:8181/activemqweb"]
+      interval: 45s
+      timeout: 20s
+      retries: 10
 
   apix:
     image: pandorasystems/apix:0.2.2
@@ -58,12 +63,13 @@ services:
     ports:
       - "8080:8080"
     depends_on:
-      - activemq
+      activemq:
+        condition: service_healthy
     volumes:
       - fcrepo-volume:/mnt/fcrepo-data
 
   fuseki:
-    image: pandorasystems/fuseki:2.4.2
+    image: pandorasystems/fuseki:2.4.3
     container_name: fuseki
     ports:
       - "3030:3030"

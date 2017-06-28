@@ -13,8 +13,7 @@ ENV JAVA_DEBUG_PORT=${DEBUG_PORT} \
     FCREPO_PORT=8080 \
     FCREPO_CONTEXT_PATH=/fcrepo \
     ACTIVEMQ_HOST=activemq \
-    MAVEN_REPO=/build/repository \
-    OPENJPEG_VERSION=2.1.2
+    MAVEN_REPO=/build/repository
 
 ENV FCREPO_BASEURI=http://${FCREPO_HOST}:${FCREPO_PORT}/${FCREPO_CONTEXT_PATH}/rest
 ENV KARAF_RUNTIME /opt/karaf
